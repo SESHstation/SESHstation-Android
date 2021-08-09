@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+<!--
+    <item
+
+        android:id="@+id/navigation_radio"
+        android:icon="@drawable/ic_radio_black_24dp"
+        android:title="@string/title_dashboard" />
+-->
+    <item
+        android:visible="true"
+        android:id="@+id/navigation_home"
+        android:title="@string/title_home"
+        android:icon="@drawable/ic_icons8_home"
+         />
+
+    <item
+        android:id="@+id/navigation_merch"
+        android:title="@string/title_merch"
+        android:visible="true"
+        android:icon="@drawable/ic_cloth"
+         />
+
+    <item
+        android:id="@+id/navigation_events"
+        android:title="@string/title_events"
+        android:visible="true"
+        android:icon="@drawable/ic_fire"
+        />
+
+    <item
+        android:id="@+id/navigation_radio"
+        android:title="@string/title_radio"
+        android:icon="@drawable/ic_radio_black_24dp"
+        android:visible="true"/>
+
+
+</menu>

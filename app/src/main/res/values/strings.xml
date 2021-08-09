@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">SESHstation</string>
+    <string name="title_home">[Home]</string>
+    <string name="title_radio">[Radio]</string>
+    <string name="title_events">[Events]</string>
+    <string name="title_merch">[Store]</string>
+    <string name="title_actionbar">[Sesh]</string>
+
+    <string name="msg_subscribe_failed">Failed to subscribe to SESH topic</string>
+    <string name="msg_subscribed">Subscribed to SESH topic</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+    <string name="default_notification_channel_id">fcm_default_channel</string>
+    <string name="fcm_message">FCM Message</string>
+    <string name="default_notification_channel_name" translatable="false">SESHpush</string>
+    <string name="subscribe_to_weather">Subscribe To SESHpush</string>
+    <string name="quickstart_message">Click the SUBSCRIBE TO SESHpush button below to subscribe to the
+        SESH topic. Messages sent to the SESH topic will be received. The LOG TOKEN button logs the
+        InstanceID token to logcat.</string>
+    <string name="log_token">Log Token</string>
+
+
+    <string name="seshstation_radio">SESHSTATION Radio</string>
+    <string name="see_more">See more</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+
+    <string name="events">Events</string>
+    <string name="Merch">Merch</string>
+    <string name="News">News</string>
+    <string name="price">price</string>
+
+    <string name="radio_api">https://seshstation.com/radio/8010/radio.mp3</string>
+    <string name="title_start">2021-02-17 23:16:07.177 30559-30559/? E/Zygote: accessInfo : 1
+2021-02-17 23:16:07.202 30559-30559/? /n E/roid.da.daagen: Not starting debugger since process cannot load the jdwp agent.
+2021-02-17 23:16:07.287 30587-30587/? /n E/Zygote: isWhitelistProcess - Process is Whitelisted
+2021-02-17 23:16:07.288 30587-30587/? /n E/Zygote: accessInfo : 1</string>
+</resources>
