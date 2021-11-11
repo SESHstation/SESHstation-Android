@@ -22,5 +22,15 @@ open class HomePresenter() : MvpPresenter<HomeInterface>() {
         )
     }
 
+    fun getBannersOnView() {
 
+        dataManager.getBannersManager(
+            onSuccess = {banner ->
+                getView().showBannersOnFragment(showBanners = banner)
+            },
+            onFailure = {
+
+            }
+        )
+    }
 }

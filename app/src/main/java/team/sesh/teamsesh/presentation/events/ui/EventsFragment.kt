@@ -20,58 +20,58 @@ import team.sesh.teamsesh.presentation.events.mvp.NotifyPresenter
 
 class EventsFragment() : Fragment(), NotifyInterface {
 
-    lateinit var navController: NavController
-    private lateinit var presenter: NotifyPresenter
-    private lateinit var snapHelper: SnapHelper
-    private lateinit var recViewBanner: RecyclerView
-    private val bannersAdapter: BannersAdapter by lazy {
-        BannersAdapter(
-            bannerClickListener = {
-                val bundle = Bundle()
-                bundle.putString("BANNERdescription", it.description)
-                bundle.putString("BANNERtitle", it.title)
-                bundle.putString("BANNERimage",it.imageBanners)
-                navController.navigate(R.id.nav_details_banners, bundle)
-            }
-        )
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ) = layoutInflater.inflate(R.layout.fragment_notifications, container, false)
-
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-        super.onViewCreated(view, savedInstanceState)
-        recViewBanner = view.findViewById(R.id.recViewBanners)
-        presenter = NotifyPresenter()
-        presenter.attachView(this)
-        presenter.getBannersOnView()
-        recViewBanners.adapter = bannersAdapter
-        navController = Navigation.findNavController(view)
-        initViews()
-
-    }
-
-    private fun initViews() {
-
-        recViewBanners.run {
-            layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
-            snapHelper = LinearSnapHelper()
-            snapHelper.attachToRecyclerView(this)
-            isNestedScrollingEnabled = false
-            bannersIndicator.attachToRecyclerView(this)
-        }
-    }
-
-    override fun showBannersOnFragment(showBanners: List<Banner>) {
-        bannersAdapter.setData(showBanners as ArrayList<Banner>)
-    }
-
-    override fun startInfoActivity(NotifyFr: Banner) {
+//    lateinit var navController: NavController
+//    private lateinit var presenter: NotifyPresenter
+//    private lateinit var snapHelper: SnapHelper
+//    private lateinit var recViewBanner: RecyclerView
+//    private val bannersAdapter: BannersAdapter by lazy {
+//        BannersAdapter(
+//            bannerClickListener = {
+//                val bundle = Bundle()
+//                bundle.putString("BANNERdescription", it.description)
+//                bundle.putString("BANNERtitle", it.title)
+//                bundle.putString("BANNERimage",it.imageBanners)
+//                navController.navigate(R.id.nav_details_banners, bundle)
+//            }
+//        )
+//    }
+//
+//    override fun onCreateView(
+//        inflater: LayoutInflater,
+//        container: ViewGroup?,
+//        savedInstanceState: Bundle?
+//    ) = layoutInflater.inflate(R.layout.fragment_notifications, container, false)
+//
+//
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//
+//        super.onViewCreated(view, savedInstanceState)
+//        recViewBanner = view.findViewById(R.id.recViewBanners)
+//        presenter = NotifyPresenter()
+//        presenter.attachView(this)
+//        presenter.getBannersOnView()
+//        recViewBanners.adapter = bannersAdapter
+//        navController = Navigation.findNavController(view)
+//        initViews()
+//
+//    }
+//
+//    private fun initViews() {
+//
+//        recViewBanners.run {
+//            layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
+//            snapHelper = LinearSnapHelper()
+//            snapHelper.attachToRecyclerView(this)
+//            isNestedScrollingEnabled = false
+//            bannersIndicator.attachToRecyclerView(this)
+//        }
+//    }
+//
+//    override fun showBannersOnFragment(showBanners: List<Banner>) {
+//        bannersAdapter.setData(showBanners as ArrayList<Banner>)
+//    }
+//
+fun startInfoActivity(NotifyFr: Banner) {
     }
 
     override fun showProgress(show: Boolean) {

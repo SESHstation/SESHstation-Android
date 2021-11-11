@@ -7,21 +7,21 @@ import team.sesh.teamsesh.presentation.global.MvpPresenter
 
 class NotifyPresenter : MvpPresenter<NotifyInterface>() {
 
-    private var vwHomePresenter: View? = null
-    private val dataManager: DataManager by lazy(LazyThreadSafetyMode.NONE) {
-        DataManager()
-    }
-
-    fun getBannersOnView() {
-
-        dataManager.getBannersManager(
-            onSuccess = {banner ->
-                getView().showBannersOnFragment(showBanners = banner)
-            },
-            onFailure = {
-
-            }
-        )
-    }
+//    private var vwHomePresenter: View? = null
+//    private val dataManager: DataManager by lazy(LazyThreadSafetyMode.NONE) {
+//        DataManager()
+//    }
+//
+//    fun getBannersOnView() {
+//
+//        dataManager.getBannersManager(
+//            onSuccess = {banner ->
+//                getView().showBannersOnFragment(showBanners = banner)
+//            },
+//            onFailure = {
+//
+//            }
+//        )
+//    }
 
 }

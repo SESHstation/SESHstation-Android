@@ -7,16 +7,16 @@
     android:background="#00000000">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="380dp"
-        android:layout_height="450dp"
+        android:layout_width="170dp"
+        android:layout_height="140dp"
         android:layout_gravity="center"
         app:cardBackgroundColor="#00000000"
         app:cardCornerRadius="12dp">
 
         <ImageView
             android:id="@+id/bannerImageView"
-            android:layout_width="match_parent"
-            android:layout_height="450dp"
+            android:layout_width="170dp"
+            android:layout_height="140dp"
             android:layout_gravity="center"
             android:scaleType="centerCrop"
             android:src="@drawable/teamsesh"
