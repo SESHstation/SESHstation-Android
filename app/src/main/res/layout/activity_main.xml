@@ -9,13 +9,27 @@
     android:background="@drawable/gradientback"
     android:fitsSystemWindows="true">
 
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        app:defaultNavHost="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+<!--<androidx.viewpager.widget.ViewPager-->
+<!--    android:id="@+id/viewpager"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+<!--</androidx.viewpager.widget.ViewPager>-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:background="@drawable/transparent_back"
-        android:backgroundTint="@color/colorPrimary"
-        android:elevation="5dp"
+        android:layout_height="0dp"
+        android:background="#00000000"
         android:focusableInTouchMode="false"
         android:pointerIcon="cell"
         app:itemIconTint="#FFFFFF"
@@ -25,19 +39,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
-
-    <fragment
-        android:id="@+id/nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="55dp"
-        android:background="#00000000"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toTopOf="@+id/nav_view"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/mobile_navigation" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

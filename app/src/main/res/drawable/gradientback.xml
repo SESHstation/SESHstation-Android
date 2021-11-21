@@ -8,6 +8,6 @@
             android:angle="90"
             android:centerX="55%"
             android:centerY="45%"
-            android:centerColor="#000000"
+            android:centerColor="#270E33"
             />
     </shape>

@@ -10,22 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="240dp">
 
-        <TextView
-            android:id="@+id/titleView"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_gravity="top"
-            android:background="#7F000000"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="@string/title"
-            android:textAlignment="gravity"
-            android:textAllCaps="false"
-            android:textColor="#F2FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
@@ -54,7 +39,22 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/teamsesh" />
 
-
+            <TextView
+                android:id="@+id/titleView"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="top"
+                android:background="#7F000000"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/title"
+                android:textAlignment="gravity"
+                android:textAllCaps="false"
+                android:textColor="#F2FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.cardview.widget.CardView>
 
         <!--        <Button-->

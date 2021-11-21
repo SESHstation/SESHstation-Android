@@ -12,31 +12,32 @@
         android:title="@string/title_dashboard" />
 -->
     <item
-        android:visible="true"
         android:id="@+id/navigation_home"
-        android:title="@string/title_home"
+        android:checkable="true"
         android:icon="@drawable/ic_icons8_home"
-         />
+        android:title="@string/title_home"
+        android:visible="true" />
+    <item
+        android:id="@+id/navigation_radio"
+        android:checkable="true"
+        android:icon="@drawable/ic_radio_black_24dp"
+        android:title="@string/title_radio"
+        android:visible="true" />
 
     <item
         android:id="@+id/navigation_merch"
-        android:title="@string/title_merch"
-        android:visible="true"
+        android:checkable="true"
         android:icon="@drawable/ic_cloth"
-         />
+        android:title="@string/title_merch"
+        android:visible="true" />
 
-    <item
-        android:id="@+id/navigation_events"
-        android:title="@string/title_events"
-        android:visible="true"
-        android:icon="@drawable/ic_fire"
-        />
+<!--    <item-->
+<!--        android:id="@+id/navigation_events"-->
+<!--        android:title="@string/title_events"-->
+<!--        android:visible="true"-->
+<!--        android:icon="@drawable/ic_fire"-->
+<!--        />-->
 
-    <item
-        android:id="@+id/navigation_radio"
-        android:title="@string/title_radio"
-        android:icon="@drawable/ic_radio_black_24dp"
-        android:visible="true"/>
 
 
 </menu>

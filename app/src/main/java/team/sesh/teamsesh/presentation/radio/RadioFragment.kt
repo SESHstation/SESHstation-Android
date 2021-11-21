@@ -11,9 +11,10 @@ import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.fragment_radio.*
 import team.sesh.teamsesh.R
 
 class RadioFragment : Fragment(), RadioInterface {
@@ -21,16 +22,36 @@ class RadioFragment : Fragment(), RadioInterface {
     lateinit var navController: NavController
     private lateinit var presenter: RadioPresenter
     @SuppressLint("SetJavaScriptEnabled")
-//    private lateinit var viewModel: SharedViewModel
-
+    private lateinit var radioViewModel: RadioViewModel
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-
-    ): View = layoutInflater.inflate(R.layout.fragment_radio, container, false)
-    // Inflate the layout for this fragment
-
+    ): View? {
+        radioViewModel =
+            ViewModelProvider(this).get(RadioViewModel::class.java)
+        // Inflate the layout for this fragment
+        val root = layoutInflater.inflate(R.layout.fragment_radio, container, false)
+            val webview: WebView =root.findViewById(R.id.webRadio)
+        webview.webViewClient = object : WebViewClient() {
+            override fun shouldOverrideUrlLoading(
+                view: WebView,
+                url: String
+            ): Boolean {
+                view.loadUrl(url)
+                return true
+            }
+        }
+        radioViewModel.webview.observe(viewLifecycleOwner, Observer {
+            webview.loadUrl("https://radio.seshstation.com/public/main")
+            webview.settings.javaScriptEnabled = true
+            webview.settings.allowContentAccess = true
+            webview.settings.domStorageEnabled = true
+            webview.settings.useWideViewPort = true
+            webview.settings.mediaPlaybackRequiresUserGesture = true
+        })
+        return root
+    }
     @SuppressLint("SetJavaScriptEnabled")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -40,24 +61,25 @@ class RadioFragment : Fragment(), RadioInterface {
         presenter.attachView(this)
 
         // включаем поддержку JavaScript
-        val myWebView: WebView = webRadio
-        myWebView.webViewClient = object : WebViewClient() {
-            override fun shouldOverrideUrlLoading(
-                view: WebView,
-                url: String
-            ): Boolean {
-                view.loadUrl(url)
-                return true
-            }
-        }
-        myWebView.loadUrl("https://radio.seshstation.com/public/main")
-        myWebView.settings.javaScriptEnabled = true
-        myWebView.settings.allowContentAccess = true
-        myWebView.settings.domStorageEnabled = true
-        myWebView.settings.useWideViewPort = true
+//        val myWebView: WebView = webRadio
+//        myWebView.webViewClient = object : WebViewClient() {
+//            override fun shouldOverrideUrlLoading(
+//                view: WebView,
+//                url: String
+//            ): Boolean {
+//                view.loadUrl(url)
+//                return true
+//            }
+//        }
+//        myWebView.loadUrl("https://radio.seshstation.com/public/main")
+//        myWebView.settings.javaScriptEnabled = true
+//        myWebView.settings.allowContentAccess = true
+//        myWebView.settings.domStorageEnabled = true
+//        myWebView.settings.useWideViewPort = true
+//        myWebView.settings.mediaPlaybackRequiresUserGesture = true
 
 
-//        viewModel = of(requireActivity()).get(SharedViewModel::class.java)
+//        viewModel = (requireActivity()).get(Utils.SharedViewModel::class.java)
 //        viewModel.bundleFromFragmentBToFragmentA.observe(viewLifecycleOwner, Observer {
 //            // This will execute when fragment B set data for `bundleFromFragmentBToFragmentA`
 //            // TODO: Write your logic here to handle data sent from FragmentB

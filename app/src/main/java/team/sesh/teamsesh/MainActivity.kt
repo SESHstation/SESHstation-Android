@@ -26,7 +26,21 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
 
-
+//    private lateinit var viewPagerAdapter: ViewPagerAdapter
+//
+//    private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+//        when (item.itemId) {
+//            R.id.navigation_home -> {
+//                viewPagerAdapter.currentItem = 0
+//                return@OnNavigationItemSelectedListener true
+//            }
+//            R.id.navigation_tab_2 -> {
+//                main_view_pager.currentItem = 1
+//                return@OnNavigationItemSelectedListener true
+//            }
+//        }
+//        false
+//    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -43,6 +57,8 @@ class MainActivity : AppCompatActivity() {
 
         //setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             // Create channel to show notifications.

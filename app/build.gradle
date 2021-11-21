@@ -12,7 +12,7 @@ apply plugin: 'com.google.firebase.firebase-perf'
 
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     buildToolsVersion '30.0.3'
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -23,9 +23,9 @@ android {
 
         applicationId "team.sesh.teamsesh"
         minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 7
-        versionName "0.6.4"
+        targetSdkVersion 30
+        versionCode 8
+        versionName "0.7"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -41,7 +41,6 @@ android {
         experimental = true
     }
 }
-
 dependencies {
     // Android
     implementation fileTree(dir: 'libs', include: ['*.jar'])
