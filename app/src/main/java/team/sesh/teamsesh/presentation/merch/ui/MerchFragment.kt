@@ -22,7 +22,7 @@ class MerchFragment : Fragment(), MerchInterface {
     private lateinit var presenter: MerchPresenter
     private val merchAdapter: MerchAdapter by lazy {
         MerchAdapter(
-            itemWidth = (Utils.getDisplayWidth(context) - (girdSpaceValue * 3) * DP.toInt()) / 2
+            itemWidth = (Utils.getDisplayWidth(context) - (girdSpaceValue * 10) * DP.toInt()) / 2
         )
     }
 

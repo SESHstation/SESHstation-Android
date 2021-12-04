@@ -10,8 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="240dp">
 
-
-
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="match_parent"
@@ -57,37 +55,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.cardview.widget.CardView>
 
-        <!--        <Button-->
-<!--            android:id="@+id/button1"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="15dp"-->
-<!--            android:background="@android:color/transparent"-->
-<!--            android:gravity="center"-->
-<!--            android:onClick="openBrowser"-->
-<!--            android:tag="www.teamsesh.com"-->
-<!--            android:text="@string/see_more"-->
-<!--            android:textAllCaps="false"-->
-<!--            android:textColor="#FDFDFD"-->
-<!--            android:textSize="10sp"-->
-<!--            android:textStyle="italic"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-        <!--        <TextView-->
-<!--            android:id="@+id/descriptionView"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/description"-->
-<!--            android:textAlignment="viewStart"-->
-<!--            android:textColor="#969696"-->
-<!--            android:textSize="12sp"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.52"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
